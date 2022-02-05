@@ -12,7 +12,7 @@ How to play LineRider++? Simple just follow the methods.
 3. Open in the Unity hub(recommended)
 4. Now in the GitHub press the button "Code" and press the button "Download ZIP"
 ![image](https://user-images.githubusercontent.com/98237337/152646379-1f0ddee6-74f3-4a18-b3fa-7b2666339f14.png)
-5. Select the file location and Unzip it...
+5. Select the file location and Unzip the file...
 6. Backing to Unity Hub select the "Open" button and go to the file destination to open it
 ![image](https://user-images.githubusercontent.com/98237337/152646530-8d40f19a-c5c8-4b1f-bc88-24abb4a4fca5.png)
 7. And here we go! enjoy the game.
