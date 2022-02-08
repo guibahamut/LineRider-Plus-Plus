@@ -1,0 +1,33 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "3bd242d2-eed8-4696-a1ea-d5c2828b9b85",
+            "actions": [
+                {
+                    "name": "Space",
+                    "type": "Button",
+                    "id": "e33355bf-4196-4df6-af2f-945620435ba5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ad6eeec4-f9da-44df-b8f7-a9c5365145cf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Space",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
