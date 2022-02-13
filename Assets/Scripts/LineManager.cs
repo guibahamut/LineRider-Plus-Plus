@@ -12,13 +12,15 @@ public class LineManager : MonoBehaviour
     [SerializeField]
     private float lineWidth = .1f;
     [SerializeField]
-    private Color lineColor = Color.black;
+    private Gradient lineColor;
     [SerializeField]
     private int lineCapVertices = 5;
     [SerializeField]
     private float effectorSpeed = 2f;
     [SerializeField]
     private PhysicsMaterial2D physicsMaterial2D;
+
+    public bool canDraw = true;
 
     #region Private
 
@@ -68,8 +70,14 @@ public class LineManager : MonoBehaviour
 
     private void OnStartDraw()
     {
-        if (!erasing)
-            StartCoroutine("Drawing");
+        // verificar se posso desenhar
+        if (canDraw == true)
+        {
+            // inicia o desenho
+            if (!erasing)
+                StartCoroutine("Drawing");
+
+        }
     }
 
     private void OnEndDraw()
@@ -105,8 +113,9 @@ public class LineManager : MonoBehaviour
         currentLineRenderer.endWidth = lineWidth;
         currentLineRenderer.numCapVertices = lineCapVertices;
         currentLineRenderer.material = new Material(Shader.Find ("Particles/Standard Unlit"));
-        currentLineRenderer.startColor = lineColor;
-        currentLineRenderer.endColor = lineColor;
+        //currentLineRenderer.startColor = lineColor;
+        //currentLineRenderer.endColor = lineColor;
+        currentLineRenderer.colorGradient = lineColor;
         currentLineEdgeCollider.edgeRadius = .1f;
         currentLineEdgeCollider.sharedMaterial = physicsMaterial2D;
         currentLineEdgeCollider.usedByEffector = true;
@@ -150,8 +159,11 @@ public class LineManager : MonoBehaviour
 
     private void OnStartErase()
     {
-        if (!drawing)
+        if (canDraw == true)
+        {
+            if (!drawing)
             StartCoroutine("Erasing");
+        }
     }
 
     private void OnEndErase()

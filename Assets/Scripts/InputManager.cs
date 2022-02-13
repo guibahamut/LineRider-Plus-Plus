@@ -65,6 +65,7 @@ public class InputManager : MonoBehaviour
         playerControls.Player.Space.performed += _ => { if (OnPressPlay != null) OnPressPlay(); };
         // Confine the cursor th the screen
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     public float GetZoom()
